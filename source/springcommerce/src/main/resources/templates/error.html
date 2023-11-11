@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Error</title>
+    <style>
+        body {
+            background-color: #f5fdd5;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #333;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .error-box {
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
+            padding: 40px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 48px;
+            margin: 0;
+        }
+        p {
+            font-size: 24px;
+            margin: 20px 0;
+        }
+        a {
+            color: #333;
+            text-decoration: none;
+            border-bottom: 2px solid #333;
+        }
+        a:hover {
+            color: #666;
+            border-bottom-color: #666;
+        }
+    </style>
+</head>
+<body>
+	<div class="container">
+	    <div class="error-box">
+	        <h1>Error</h1>
+	        <p>Status code: <span th:text="${statusCode}"></span></p>
+	        <p>Error message: <span th:text="${errorMessage}"></span></p>
+	        <p><a href="/">Go back to home page</a></p>
+	    </div>
+	</div>
+</body>
+</html>
